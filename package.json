@@ -1,0 +1,87 @@
+{
+  "name": "gist-discover",
+  "displayName": "Gist – Discover AI Research",
+  "description": "Read, listen to, and favorite AI research papers from gist.is/discover inside Cursor and VS Code.",
+  "version": "0.2.0",
+  "publisher": "Transcendence",
+  "license": "MIT",
+  "icon": "icons/gist-marketplace.png",
+  "galleryBanner": {
+    "color": "#1C1C24",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TranscendenceInc/gist-discover.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TranscendenceInc/gist-discover/issues"
+  },
+  "homepage": "https://gist.is/discover",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "gist",
+    "reader",
+    "discover",
+    "tts",
+    "audio"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onView:gist.discover"
+  ],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "gist-discover",
+          "title": "Gist",
+          "icon": "icons/gist-activitybar.svg"
+        }
+      ]
+    },
+    "views": {
+      "gist-discover": [
+        {
+          "type": "webview",
+          "id": "gist.discover",
+          "name": "Discover",
+          "contextualTitle": "Gist Discover"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Gist Discover",
+      "properties": {
+        "gist.discover.theme": {
+          "type": "string",
+          "enum": ["auto", "light", "dark"],
+          "enumDescriptions": [
+            "Follow the active VS Code color theme",
+            "Always use light mode",
+            "Always use dark mode"
+          ],
+          "default": "auto",
+          "description": "Color theme for the Gist Discover sidebar."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "package": "vsce package --no-dependencies --out gist-vscode-extension.vsix",
+    "prepackage": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.100.0",
+    "@vscode/vsce": "^3.2.0",
+    "typescript": "^5.5.0"
+  }
+}
