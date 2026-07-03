@@ -1,5 +1,7 @@
 .vscode/**
 .github/**
+.plugin/**
+skills/**
 src/**
 **/*.ts
 **/*.map

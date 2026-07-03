@@ -1,0 +1,14 @@
+{
+  "name": "gist-discover",
+  "version": "0.2.1",
+  "description": "Agent instructions for the Gist Discover Cursor and VS Code extension.",
+  "author": {
+    "name": "Transcendence",
+    "url": "https://github.com/TranscendenceInc"
+  },
+  "homepage": "https://gist.is/discover",
+  "repository": "https://github.com/TranscendenceInc/gist-discover",
+  "license": "MIT",
+  "logo": "icons/gist-activitybar.svg",
+  "keywords": ["gist", "cursor", "vscode", "discover", "research"]
+}
