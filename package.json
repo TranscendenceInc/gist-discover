@@ -2,7 +2,7 @@
   "name": "gist-discover",
   "displayName": "Gist – Discover AI Research",
   "description": "Read, listen to, and favorite AI research papers from gist.is/discover inside Cursor and VS Code.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "publisher": "Transcendence",
   "license": "MIT",
   "icon": "icons/gist-marketplace.png",
